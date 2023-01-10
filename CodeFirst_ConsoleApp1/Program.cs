@@ -58,8 +58,13 @@ namespace CodeFirst_ConsoleApp1
          * Add the connection string in your config file
          * In the your DbContext class in the constractor call base("name=connection string")
          * In Package manager console enable-migrations , this command run only one time in the project
+         * useing database centric name is better than using model centric name
+         * enable-migrations
          * add-migration migratinname
          * update-database -verbose
+         * add-migration migratinname -IgnorChanges -Force
+         * to revert migration and bring the database to and old version use:
+         * update-database -TargetMigration:RenameTitleColumnWithNameInCourseTable
          */
         static void Main(string[] args)
         {
